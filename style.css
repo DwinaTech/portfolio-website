@@ -9,8 +9,18 @@ html {
 
 body {
   color: #ffffff;
+  overflow-x: hidden;
   background-color: #333333;
   font-family: "Archivo", sans-serif;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+p {
+  font-size: 20px;
+  line-height: 30px;
 }
 
 .container {
@@ -135,7 +145,7 @@ body {
 /* ============== Banner ============== */
 .banner {
   width: 100%;
-  height: 480px;
+  min-height: 100vh;
   background-color: #4876c2;
 }
 
@@ -145,7 +155,7 @@ body {
 
 .banner .contents {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   padding-left: 15px;
   flex-direction: column;
@@ -160,24 +170,27 @@ body {
   padding-bottom: 100px;
 }
 
-.contents h2,
-.contents p {
+.banner .contents h2,
+.banner .contents p {
   color: #ffffff;
   margin-bottom: 10px;
   font-family: "Merienda", cursive;
 }
 
-.contents h2 {
+.banner .contents h2 {
   font-size: 45px;
 }
 
-.contents p {
+.banner .contents p {
   font-size: 18px;
 }
 
 @media (min-width: 800px) {
+  .banner {
+    min-height: 480px;
+  }
   .banner .contents {
-    height: 480px;
+    min-height: 480px;
     margin-top: 0;
     padding-bottom: 0;
     background-size: initial;
@@ -187,11 +200,11 @@ body {
     background-position: 300px center;
   }
 
-  .contents h2 {
+  .banner .contents h2 {
     font-size: 55px;
   }
 
-  .contents p {
+  .banner .contents p {
     font-size: 28px;
   }
 }
@@ -206,9 +219,50 @@ body {
   .banner .contents::after {
     content: "";
     width: 100%;
-    height: 480px;
+    min-height: 480px;
     background-image: linear-gradient(to left, #4876c2 25%, transparent 45%);
     position: absolute;
     right: -160px;
+  }
+}
+
+/* ============== About ============== */
+#about {
+  display: flex;
+  margin: 20px 0;
+  min-height: 60vh;
+  align-items: center;
+}
+
+#about h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#about .contents {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: 1fr;
+}
+
+#about .contents img {
+  width: 300px;
+  padding: 5px;
+  margin: 0 auto;
+  border-radius: 25%;
+  background-color: #4876c2;
+}
+
+@media (min-width: 800px) {
+  #about h2 {
+    margin-bottom: 50px;
+  }
+
+  #about .contents {
+    grid-template-columns: 1fr 4fr;
+  }
+
+  #about .contents img {
+    width: 100%;
   }
 }
