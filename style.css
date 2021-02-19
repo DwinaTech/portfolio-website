@@ -337,3 +337,35 @@ p {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* ============== Footer ============== */
+footer {
+  width: 100%;
+  background-color: #000000;
+}
+
+footer .contents {
+  height: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer .contents h4 {
+  font-size: 20px;
+}
+
+footer .contents .social-icons {
+  margin: 10px 0;
+}
+
+footer .contents .social-icons img {
+  width: 60px;
+}
+
+footer .contents .social-icons a {
+  display: inline-block;
+}
+
+footer .contents .social-icons a:not(:last-child) {
+  margin-right: 10px;
+}
