@@ -187,10 +187,10 @@ p {
 
 @media (min-width: 800px) {
   .banner {
-    min-height: 480px;
+    min-height: 600px;
   }
   .banner .contents {
-    min-height: 480px;
+    min-height: 600px;
     margin-top: 0;
     padding-bottom: 0;
     background-size: initial;
@@ -219,7 +219,7 @@ p {
   .banner .contents::after {
     content: "";
     width: 100%;
-    min-height: 480px;
+    min-height: 600px;
     background-image: linear-gradient(to left, #4876c2 25%, transparent 45%);
     position: absolute;
     right: -160px;
