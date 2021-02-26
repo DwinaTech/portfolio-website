@@ -1,12 +1,5 @@
-const menu = document.querySelector(".menu");
-const navContents = document.querySelector("#nav_contents");
-
-menu.addEventListener("click", () => {
-  navContents.classList.toggle("toggle");
-});
-
+// Fetch and render services section
 const services = document.querySelector("#services .contents");
-
 const renderServices = async () => {
   try {
     const data = await fetch("data/services.json");
@@ -29,8 +22,8 @@ const renderServices = async () => {
   }
 };
 
+// Fetch and render projects section
 const projects = document.querySelector("#projects .contents");
-
 const renderProjects = async () => {
   try {
     const data = await fetch("data/projects.json");
@@ -56,4 +49,27 @@ const renderProjects = async () => {
 window.addEventListener("load", () => {
   renderServices();
   renderProjects();
+});
+
+// Toggle menu icons
+const menu = document.querySelector(".menu");
+const navContents = document.querySelector("#nav_contents");
+
+menu.addEventListener("click", () => {
+  navContents.classList.toggle("toggle");
+});
+
+// Scroll to top button
+window.addEventListener("scroll", () => {
+  const scrollHeight = window.pageYOffset;
+  const moveTopButton = document.querySelector(".move-top");
+  if (scrollHeight > 420) {
+    moveTopButton.style.opacity = 1;
+    moveTopButton.style.top = "85vh";
+    moveTopButton.style.right = "30px";
+  } else {
+    moveTopButton.style.opacity = 0;
+    moveTopButton.style.top = "50vh";
+    moveTopButton.style.right = "20vw";
+  }
 });

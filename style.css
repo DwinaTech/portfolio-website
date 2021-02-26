@@ -141,6 +141,25 @@ p {
     display: inline-block;
   }
 }
+/* ============== Move to top icon ============== */
+.move-top {
+  top: 50vh;
+  opacity: 0;
+  right: 20vw;
+  width: 50px;
+  z-index: 99;
+  height: 50px;
+  display: block;
+  position: fixed;
+  transition: all 0.3s ease-in;
+}
+
+.move-top img {
+  width: 100%;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: #4876c2;
+}
 
 /* ============== Banner ============== */
 .banner {
