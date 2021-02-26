@@ -324,27 +324,7 @@ p {
 }
 
 #services .contents .card .description {
-  overflow: hidden;
   margin-bottom: 10px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-#services .contents .card .more-details {
-  color: #fbffff;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  font-size: 20px;
-  padding: 5px 15px;
-  border-radius: 20px;
-  background-color: #70783b;
-}
-
-@media (min-width: 600px) {
-  #services .contents {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media (min-width: 800px) {
@@ -356,6 +336,12 @@ p {
     margin-bottom: 50px;
   }
 
+  #services .contents {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
   #services .contents {
     grid-template-columns: repeat(3, 1fr);
   }

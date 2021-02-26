@@ -13,7 +13,6 @@ const renderServices = async () => {
             <p class="description">
               ${response[i].description}
             </p>
-            <button class="more-details">More</button>
           </div>`;
     }
     services.innerHTML = item;
