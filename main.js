@@ -58,6 +58,31 @@ menu.addEventListener("click", () => {
   navContents.classList.toggle("toggle");
 });
 
+const home = document.querySelector("#home_link");
+home.addEventListener("click", () => {
+  navContents.classList.toggle("toggle");
+});
+
+const about = document.querySelector("#about_link");
+about.addEventListener("click", () => {
+  navContents.classList.toggle("toggle");
+});
+
+const servicesLink = document.querySelector("#services_link");
+servicesLink.addEventListener("click", () => {
+  navContents.classList.toggle("toggle");
+});
+
+const projectsLink = document.querySelector("#projects_link");
+projectsLink.addEventListener("click", () => {
+  navContents.classList.toggle("toggle");
+});
+
+const contact = document.querySelector("#contact_link");
+contact.addEventListener("click", () => {
+  navContents.classList.toggle("toggle");
+});
+
 // Scroll to top button
 window.addEventListener("scroll", () => {
   const scrollHeight = window.pageYOffset;
