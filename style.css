@@ -229,7 +229,7 @@ p {
 /* ============== About ============== */
 #about {
   display: flex;
-  margin: 20px 0;
+  padding: 20px 0;
   min-height: 50vh;
   align-items: center;
 }
@@ -254,6 +254,10 @@ p {
 }
 
 @media (min-width: 800px) {
+  #about {
+    padding: 50px 0;
+  }
+
   #about h2 {
     margin-bottom: 50px;
   }
@@ -269,7 +273,7 @@ p {
 
 /* ============== Services ============== */
 #services {
-  margin-bottom: 10px;
+  padding: 10px 0;
 }
 
 #services h2 {
@@ -326,7 +330,7 @@ p {
 
 @media (min-width: 800px) {
   #services {
-    margin-bottom: 40px;
+    padding: 40px 0;
   }
 
   #services h2 {
@@ -339,7 +343,7 @@ p {
 }
 /* ============== Projects ============== */
 #projects {
-  margin-bottom: 10px;
+  padding: 10px 0;
 }
 
 #projects h2 {
@@ -416,7 +420,7 @@ p {
 
 @media (min-width: 800px) {
   #projects {
-    margin-bottom: 40px;
+    padding: 40px 0;
   }
 
   #projects h2 {
@@ -424,6 +428,68 @@ p {
   }
 
   #projects .contents {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* ============== Contact ============== */
+#contact {
+  padding: 20px 0;
+  background-color: #4776c266;
+}
+
+#contact h2 {
+  margin-bottom: 20px;
+}
+
+#contact .contents .info {
+  display: grid;
+  grid-gap: 15px;
+  color: #000000;
+  grid-template-columns: 1fr;
+}
+
+#contact .contents .info .card {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  border-radius: 5px;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #ffffff;
+  transition: background-color 0.4s ease-in-out;
+}
+
+#contact .contents .info .card:hover {
+  background-color: #dddddd;
+}
+
+#contact .contents .info .card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+iframe {
+  width: 100%;
+  height: 450px;
+}
+
+@media (min-width: 600px) {
+  #contact .contents .info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 800px) {
+  #contact {
+    padding: 50px 0;
+  }
+  #contact h2 {
+    margin-bottom: 50px;
+  }
+
+  #contact .contents .info {
     grid-template-columns: repeat(3, 1fr);
   }
 }
